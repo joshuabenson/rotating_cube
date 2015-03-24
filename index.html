@@ -1,0 +1,96 @@
+<html>
+  <head>
+  <script src="jquery.js"></script>
+ <script src="testcube.js"></script>
+  <script src="underscore-min.js"></script>
+
+ </head>
+    <main>
+<div class="scene">
+<div class="cube" id="cube">
+    <img src='gilberthead.png' class="cube-face  cube-face-front"></src>
+    <div class="cube-face  cube-face-back"></div>
+    <div class="cube-face  cube-face-left"></div>
+    <div class="cube-face  cube-face-right"></div>
+    <div class="cube-face  cube-face-top"></div>
+    <div class="cube-face  cube-face-bottom"></div>
+ </div>
+ </div>
+ <button id="rotate">rotate</button>
+ </main>
+
+
+<style>
+.scene {
+width: 1000px;
+height: 800px;
+perspective: 1000px;
+}
+.cube {
+  width: 500px
+  height: 300px;
+  position: relative;
+  top:200px;
+  left:500px;
+  transform-style: preserve-3d;
+  transition: transform 20s linear;
+ 
+}
+.rotate {
+  transform: rotateY(1080deg) rotateX(2160deg) rotateZ(360deg)translateZ(-1000px);
+ 
+}
+.cube-face-front {
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  background: red;
+  opacity: 1;
+}
+.cube-face-back {
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  background: red;
+  opacity: 1;
+  transform: translateX(0px)translateY(0px)translateZ(-100px) rotateY(0deg);
+}
+.cube-face-left {
+   
+  width: 100px;
+  height: 300px;
+  position: absolute;
+  background: red;
+  opacity: 1;
+  transform: translateX(-50px)translateY(0px)translateZ(-50px) rotateY(90deg);
+
+}
+.cube-face-right {
+  width: 100px;
+  height: 300px;
+  position: absolute;
+  background: red;
+  opacity: 1;
+  transform: translateX(450px)translateY(0px)translateZ(-50px) rotateY(90deg);
+}
+.cube-face-top {
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  background: red;
+  opacity: 1;
+  transform: translateX(0px)translateY(-50px)translateZ(-50px) rotateX(90deg);
+}
+.cube-face-bottom {
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  background: red;
+  opacity: 1;
+  transform: translateX(0px)translateY(250px)translateZ(-50px) rotateX(90deg);
+}
+</style>
+
+
+
+</html>
