@@ -8,12 +8,12 @@
 
 <div class="scene">
   <div class="cube" id="cube">
-    <div class="cube-face-front"></div>
-    <div class="cube-face-back"></div>
-    <div class="cube-face-left"></div>
-    <div class="cube-face-right"></div>
-    <div class="cube-face-top"></div>
-    <div class="cube-face-bottom"></div>
+    <div class="cube-face-front cube-face"></div>
+    <div class="cube-face-back cube-face"></div>
+    <div class="cube-face-left cube-face"></div>
+    <div class="cube-face-right cube-face"></div>
+    <div class="cube-face-top cube-face"></div>
+    <div class="cube-face-bottom cube-face"></div>
  </div>
 </div>
 
@@ -38,7 +38,9 @@
   transform-style: preserve-3d;
   transition: transform 20s linear;
 }
-
+.cube-face{
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cedbe9), color-stop(7%,#aac5de), color-stop(21%,#6199c7), color-stop(41%,#3a84c3), color-stop(59%,#419ad6), color-stop(71%,#4bb8f0), color-stop(84%,#3a8bc2), color-stop(100%,#26558b)); /* Chrome,Safari4+ */
+}
 .rotate {
   transform: rotateY(1080deg) rotateX(2160deg) rotateZ(360deg)translateZ(-1000px);
 }
@@ -53,14 +55,13 @@
   width: 500px;
   height: 300px;
   position: absolute;
-  background: red;
   opacity: 1;
 }
 .cube-face-back {
   width: 500px;
   height: 300px;
   position: absolute;
-  background: red;
+ /* background: red;*/
   opacity: 1;
   transform: translateX(0px)translateY(0px)translateZ(-100px) rotateY(0deg);
 }
@@ -68,7 +69,7 @@
   width: 100px;
   height: 300px;
   position: absolute;
-  background: red;
+/*  background: red;*/
   opacity: 1;
   transform: translateX(-50px)translateY(0px)translateZ(-50px) rotateY(90deg);
 }
@@ -76,7 +77,7 @@
   width: 100px;
   height: 300px;
   position: absolute;
-  background: red;
+/*  background: red;*/
   opacity: 1;
   transform: translateX(450px)translateY(0px)translateZ(-50px) rotateY(90deg);
 }
@@ -84,7 +85,7 @@
   width: 500px;
   height: 100px;
   position: absolute;
-  background: red;
+/*  background: red;*/
   opacity: 1;
   transform: translateX(0px)translateY(-50px)translateZ(-50px) rotateX(90deg);
 }
@@ -92,7 +93,7 @@
   width: 500px;
   height: 100px;
   position: absolute;
-  background: red;
+ /* background: red;*/
   opacity: 1;
   transform: translateX(0px)translateY(250px)translateZ(-50px) rotateX(90deg);
 }
