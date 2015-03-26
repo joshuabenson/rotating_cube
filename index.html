@@ -10,24 +10,26 @@
 </div> 
 
  <button id="rotate">rotate</button>
+ <button id="addgilbert">add gilbert</button>
+ 
  </main>
 
 
 <style>
 .scene {
-width: 600px;
-height: 800px;
-perspective: 1000px;
+ width: 600px;
+ height: 800px;
+ perspective: 1000px;
 }
+
 .gilcube {
   width: 500px
   height: 300px;
   position: relative;
-  top:200px;
-  left:300px;
+  /*top:200px;
+  left:300px;*/
   transform-style: preserve-3d;
   transition: transform 20s linear;
- 
 }
 .rotate {
   transform: rotateY(1080deg) rotateX(2160deg) rotateZ(360deg)translateZ(-1000px);

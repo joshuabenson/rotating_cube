@@ -28,10 +28,8 @@ debugger;
  $('.scene').append(this.$node).append(
       this.cubeFaces() );
 
- // var gil = new gilbert();
 
-
-}
+ }
 
 // <div class="cube" id="cube">
 //     <img src='gilberthead.png' class="cube-face  cube-face-front"></src>
@@ -45,21 +43,14 @@ debugger;
 //Gilcube gets appended, gets faces appended to it, then gets CSS properties assigned to it
 
 
-
 $(document).ready(function(){
 
   $('#rotate').on('click', function(){
-    console.log('');
-    
-
-    
-
-    
-
-
-
     $('.gilcube').addClass('rotate');
-setTimeout( function(){$('.gilcube').removeClass('rotate')} , 20000);
-});
-
+    setTimeout( function(){$('.gilcube').removeClass('rotate')} , 20000);
   });
+  
+  $('#addgilbert').on('click', function(){
+    var gil = new gilbert();
+  });
+});
