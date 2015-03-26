@@ -2,16 +2,17 @@
  
 var gilbert = function() {
   //
-  this.$node = $('<div class = "gilcube"></div>');
+  this.$node = $('<div class = "gilcube"></div>');//element for faces to append to
   this.xpos = (Math.random() * $('.scene').width());
   this.ypos = (Math.random() * $('.scene').height());
-  this.zpos = (Math.random() * 600); //TODO implement random Z instantiation 
+  this.zpos = (Math.random() * 600); //TODO implement random Z on instantiation 
 
   this.rotateMul = (Math.random()*10); //TODO implement variable rotation speed
 
-  this.$node.css({top: this.xpos, left: this.ypos}); //all the CSS properties might need to be dynamically assigned using jQuery
+  this.$node.css({top: this.xpos, left: this.ypos}); 
 
-  this.cubeFaces = function() {  //function creates an array of face divs to be appended to main gilcube element
+//function creates an array of face divs to be appended to main gilcube element
+  this.cubeFaces = function() {  
     var faces = ['<img src="gilberthead.png" class="cube-face cube-face-front"></src>',
       '<div class="cube-face  cube-face-back"></div>',
       '<div class="cube-face  cube-face-left">', 
