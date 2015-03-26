@@ -1,31 +1,34 @@
 <html>
   <head>
-  <script src="jquery.js"></script>
+ <script src="jquery.js"></script>
  <script src="testcube.js"></script>
-  <script src="underscore-min.js"></script>
-
+ <script src="underscore-min.js"></script>
  </head>
-    <main>
+  <main>
+
 <div class="scene">
-<div class="cube" id="cube">
-    <img src='gilberthead.png' class="cube-face  cube-face-front"></src>
-    <div class="cube-face  cube-face-back"></div>
-    <div class="cube-face  cube-face-left"></div>
-    <div class="cube-face  cube-face-right"></div>
-    <div class="cube-face  cube-face-top"></div>
-    <div class="cube-face  cube-face-bottom"></div>
+  <div class="cube" id="cube">
+    <div class="cube-face-front"></div>
+    <div class="cube-face-back"></div>
+    <div class="cube-face-left"></div>
+    <div class="cube-face-right"></div>
+    <div class="cube-face-top"></div>
+    <div class="cube-face-bottom"></div>
  </div>
- </div>
- <button id="rotate">rotate</button>
+</div>
+
+   <button id="rotate">rotate</button>
  </main>
 
 
 <style>
+
 .scene {
-width: 600px;
-height: 800px;
-perspective: 1000px;
+  width: 600px;
+  height: 800px;
+  perspective: 1000px;
 }
+
 .cube {
   width: 500px
   height: 300px;
@@ -34,12 +37,12 @@ perspective: 1000px;
   left:300px;
   transform-style: preserve-3d;
   transition: transform 20s linear;
- 
 }
+
 .rotate {
   transform: rotateY(1080deg) rotateX(2160deg) rotateZ(360deg)translateZ(-1000px);
- 
 }
+
 #rotate {
   position:relative;
   left: 300px;
@@ -62,14 +65,12 @@ perspective: 1000px;
   transform: translateX(0px)translateY(0px)translateZ(-100px) rotateY(0deg);
 }
 .cube-face-left {
-   
   width: 100px;
   height: 300px;
   position: absolute;
   background: red;
   opacity: 1;
   transform: translateX(-50px)translateY(0px)translateZ(-50px) rotateY(90deg);
-
 }
 .cube-face-right {
   width: 100px;
