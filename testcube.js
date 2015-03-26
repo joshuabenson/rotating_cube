@@ -12,7 +12,7 @@ var gilbert = function() {
 var styleSettings = this.$node.css({top: this.xpos, left: this.ypos}); //all the CSS properties might need to be dynamically assigned using jQuery
 
 this.cubeFaces = function() {
-  var faces = ['<src class="cube-face cube-face-front"></src>',
+  var faces = ['<img src="gilberthead.png" class="cube-face cube-face-front"></src>',
    '<div class="cube-face  cube-face-back"></div>',
    '<div class="cube-face  cube-face-left">', 
    '<div class="cube-face  cube-face-right"></div>',
