@@ -1,21 +1,14 @@
 <html>
   <head>
-  <script src="jquery.js"></script>
+ <script src="jquery.js"></script>
  <script src="testcube.js"></script>
-  <script src="underscore-min.js"></script>
+ <script src="underscore-min.js"></script>
 
  </head>
-    <main>
-<div class="scene">
-<div class="cube" id="cube">
-    <img src='gilberthead.png' class="cube-face  cube-face-front"></src>
-    <div class="cube-face  cube-face-back"></div>
-    <div class="cube-face  cube-face-left"></div>
-    <div class="cube-face  cube-face-right"></div>
-    <div class="cube-face  cube-face-top"></div>
-    <div class="cube-face  cube-face-bottom"></div>
- </div>
- </div>
+  <main>
+<div class="scene"><!--all cube elements and their face children get appended here-->
+</div> 
+
  <button id="rotate">rotate</button>
  </main>
 
@@ -26,7 +19,7 @@ width: 600px;
 height: 800px;
 perspective: 1000px;
 }
-.cube {
+.gilcube {
   width: 500px
   height: 300px;
   position: relative;
@@ -51,7 +44,7 @@ perspective: 1000px;
   height: 300px;
   position: absolute;
   background: red;
-  opacity: 1;
+  opacity: .2;
 }
 .cube-face-back {
   width: 500px;
