@@ -13,12 +13,12 @@ var gilbert = function() {
 
 //function creates an array of face divs to be appended to main gilcube element
   this.cubeFaces = function() {  
-    var faces = ['<img src="gilberthead.png" class="cube-face cube-face-front"></src>',
-      '<div class="cube-face  cube-face-back"></div>',
-      '<div class="cube-face  cube-face-left">', 
-      '<div class="cube-face  cube-face-right"></div>',
-      '<div class="cube-face  cube-face-top"></div>',
-      '<div class="cube-face  cube-face-bottom"></div>'];
+    var faces = ['<img src="box.png" class="cube-face cube-face-front"></img>',
+      '<img src="box.png" class="cube-face  cube-face-back"></img>',
+      '<img src="box.png" class="cube-face  cube-face-left"></img>', 
+      '<img src="box.png" class="cube-face  cube-face-right"></img>',
+      '<img src="box.png"class="cube-face  cube-face-top"></img>',
+      '<img src="box.png" class="cube-face  cube-face-bottom"></img>'];
     var $face;
     for (var i = 0; i < faces.length; i++) {
       $face = faces[i];
@@ -32,9 +32,14 @@ var gilbert = function() {
 $(document).ready(function() {
 
   $('#rotate').on('click', function() {
+
     $('.gilcube').addClass('rotate');
-    setTimeout( function(){$('.gilcube').removeClass('rotate')} , 20000);
-  });
+
+    setTimeout( function(){ $('.gilcube').removeClass('rotate').addClass('return'); 
+
+      setTimeout( function(){ $('.gilcube').removeClass('return') } , 5000);
+
+ }, 5000)})
   
   $('#addgilbert').on('click', function() {
     var gil = new gilbert();

@@ -11,7 +11,7 @@
 </div> 
 
  <button id="rotate">rotate</button>
- <button id="addgilbert">add gilbert</button>
+ <button id="addgilbert">add ????</button>
  
  </main>
 </body>
@@ -20,18 +20,19 @@
 .scene {
  width: 600px;
  height: 800px;
- perspective: 60px;
+ perspective: 1000px;
 }
 
 .gilcube {
-  width: 500px
-  height: 300px;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 20s linear;
+  transition: transform 15s;
 }
 .rotate {
-  transform: rotateY(1080deg) rotateX(2160deg) rotateZ(360deg)translateZ(-1000px);
+  transform: rotateY(90deg) rotateX(0deg) rotateZ(600deg)translateY(-200px);
+}
+.return {
+  transform: rotateY(180deg) rotateX(600deg) rotateZ(0deg)translateY(0px);
 }
 
 #rotate {
@@ -47,51 +48,51 @@
   height:100px;
 }
 .cube-face-front {
-  width: 500px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   position: absolute;
-  background: red;
-  opacity: 1;
+  background: orange;
+  opacity: .9;
 }
 .cube-face-back {
-  width: 500px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   position: absolute;
-  background: red;
-  opacity: .5;
-  transform: translateX(0px)translateY(0px)translateZ(-100px) rotateY(0deg);
+  background: orange;
+  opacity: .9;
+  transform: translateX(0px)translateY(0px)translateZ(200px) rotateY(0deg);
 }
 .cube-face-left {
-  width: 100px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   position: absolute;
-  background: blue;
-  opacity: .5;
-  transform: translateX(-50px)translateY(0px)translateZ(-50px) rotateY(90deg);
+  background: orange;
+  opacity: .9;
+  transform: translateX(-100px)translateY(0px)translateZ(100px) rotateY(90deg);
 }
 .cube-face-right {
-  width: 100px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   position: absolute;
-  background: green;
-  opacity: .5;
-  transform: translateX(450px)translateY(0px)translateZ(-50px) rotateY(90deg);
+  background: orange;
+  opacity: .9;
+  transform: translateX(100px)translateY(0px)translateZ(100px) rotateY(90deg);
 }
 .cube-face-top {
-  width: 500px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   position: absolute;
-  background: green;
-  opacity: .5;
-  transform: translateX(0px)translateY(-50px)translateZ(-50px) rotateX(90deg);
+  background: orange;
+  opacity: .9;
+  transform: translateX(0px)translateY(-100px)translateZ(100px) rotateX(90deg);
 }
 .cube-face-bottom {
-  width: 500px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   position: absolute;
-  background: green;
-  opacity: .5;
-  transform: translateX(0px)translateY(250px)translateZ(-50px) rotateX(90deg);
+  background: orange;
+  opacity: .9;
+  transform: translateX(0px)translateY(100px)translateZ(100px) rotateX(90deg);
 }
 </style>
 
