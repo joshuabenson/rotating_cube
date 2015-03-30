@@ -44,4 +44,8 @@ $(document).ready(function() {
   $('#addgilbert').on('click', function() {
     var gil = new gilbert();
   });
+  $(document).on('click', '.gilcube', function() { $(this).addClass('rotate');
+    setTimeout( function() { $(this).removeClass('rotate'); }, 5000);
+  });
+  
 });
