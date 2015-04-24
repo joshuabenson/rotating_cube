@@ -17,7 +17,7 @@ var gilbert = function() {
       '<img src="gilberthead.png" class="cube-face  cube-face-back"></img>',
       '<img src="gilberthead.png" class="cube-face  cube-face-left"></img>', 
       '<img src="gilberthead.png" class="cube-face  cube-face-right"></img>',
-      '<img src="gilberthead.png"class="cube-face  cube-face-top"></img>',
+      '<img src="gilberthead.png" class="cube-face  cube-face-top"></img>',
       '<img src="gilberthead.png" class="cube-face  cube-face-bottom"></img>'];
     var $face;
     for (var i = 0; i < faces.length; i++) {
