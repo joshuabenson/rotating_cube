@@ -1,15 +1,18 @@
 
- 
+var sceneXAngle = 0,
+sceneYAngle = 0,
+d = -860; 
+
 var gilbert = function() {
   //
   this.$node = $('<div class = "gilcube"></div>');//element for faces to append to
-  this.xpos = (Math.random() * $('.scene').width());
-  this.ypos = (Math.random() * $('.scene').height());
-  this.zpos = (Math.random() * 600); //TODO implement random Z on instantiation 
+  this.xpos = (Math.random() * 1000);
+  this.ypos = (Math.random() * 1000);
+  this.zpos = (Math.random() * 800); //TODO implement random Z on instantiation 
 
   this.rotateMul = (Math.random()*10); //TODO implement variable rotation speed
 
-  this.$node.css({top: this.xpos, left: this.ypos}); 
+  this.$node.css({top: this.xpos, left: this.ypos, transform: 'translateZ(' + this.zpos + 'px)'}); 
 
 //function creates an array of face divs to be appended to main gilcube element
   this.cubeFaces = function() {  
@@ -26,10 +29,27 @@ var gilbert = function() {
       (this.$node).append($face);
     } 
   }
-  $('.scene').append(this.$node).append(this.cubeFaces());
+  $('#scene').append(this.$node).append(this.cubeFaces());
+  // this.$node.css('transform', 'translateZ(' + this.zpos + ')');
+};
+
+var updateView = function() {
+  scene.style.transform = 'translateZ( ' + d + 'px ) \
+  rotateX( ' + sceneXAngle + 'deg) \
+  rotateY( ' + sceneYAngle + 'deg)';
 };
 
 $(document).ready(function() {
+
+var scene = document.getElementById( 'scene' ),
+viewport = document.getElementById( 'viewport' );
+
+
+  window.addEventListener( 'mousemove', function( e ) {
+    sceneYAngle = -( .5 - ( e.clientX / window.innerWidth ) ) * 180;
+    sceneXAngle = ( .5 - ( e.clientY / window.innerHeight ) ) * 180;
+    updateView();
+} );
 
   $('#rotate').on('click', function() {
 
@@ -46,19 +66,5 @@ $(document).ready(function() {
   $(document).on('click', '.gilcube', function() { $(this).addClass('rotate');
     setTimeout( function() { $(this).removeClass('rotate'); }, 5000);
   });
-  // document.onkeydown = function(e) {
-//   switch (e.keyCode) {
-// // case 37:
-// //   alert('left');
-// //     break;
-//     case 38:
-//         $('.scene').animate( {top: "+=20px"} )
-//         break;
-// // case 39:
-// //   alert('right');
-// //     break;
-//     case 40:
-//        $('.scene').animate( {top: "-=20px"} )
-//         break;
-  // }
+
 });

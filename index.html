@@ -7,31 +7,51 @@
  </head>
  <body bgcolor="black">
    <main>
-   <div class="scene"><!--all cube elements and their face children get appended here-->
+   <div id="viewport">
+   <div id="scene"><!--all cube elements and their face children get appended here-->
    </div> 
-
+   </div>
      <button id="rotate">rotate</button>
      <button id="addgilbert">add ????</button>
  
    </main>
 </body>
 <style>
-
-.scene {
- width: 600px;
- height: 800px;
- -webkit-perspective: 1000px;
- -moz-perspective: 1000px;
- perspective: 1000px;
-
+#viewport {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+/*  overflow: hidden;*/
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  perspective: 800px;
+}
+#scene {
+ width: 640px;
+ height: 480px;
+ position: absolute;
+/* transform: translateZ(2000px);*/
+ transform-style: preserve-3d;
+ margin-left: 960px;
+ margin-top: -256px;
+ top: 50%;
+ left: 50%;
 }
 .gilcube {
-  position: relative;
+    position: relative;
   -webkit-transform-style: preserve-3d;
   -webkit-transition: -webkit-transform 15s;
   -moz-transform-style: preserve-3d;
   -moz-transition: -moz-transform 15s;
   transition: transform 15s;
+  /*  height: 256px;
+    left: 50%;
+    margin-left: -128px;
+    margin-top: -128px;
+    top: 50%;
+    width: 256px;*/
+}
 }
 .open {
   transform: rotateY(90deg) rotateX(0deg) rotateZ(600deg)translateY(-200px);
@@ -50,8 +70,8 @@
 }
 
 #rotate {
-  position:relative;
-  top: -400;
+  position:absolute;
+  top: 50px;
   left: 300px;
   width:150px;
   height:300px;
@@ -60,8 +80,8 @@
   transform: translateX(-100px)translateY(0px)translateZ(100px)rotateY(25deg) rotateZ(-15deg);
 }
 #addgilbert {
-  top: -400;
-  position:relative;
+  top: 50px;
+  position:absolute;
   left: 300px;
   width:150px;
   height:400px;
