@@ -12,7 +12,7 @@ var gilbert = function() {
 
   this.rotateMul = (Math.random()*10); //TODO implement variable rotation speed
 
-  this.$node.css({top: this.xpos, left: this.ypos, transform: 'translateZ(' + this.zpos + 'px)'}); 
+  this.$node.css({top: this.xpos, left: this.ypos/*, transform: 'translateZ(' + this.zpos + 'px)'*/}); 
 
 //function creates an array of face divs to be appended to main gilcube element
   this.cubeFaces = function() {  
