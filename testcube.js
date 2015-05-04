@@ -8,7 +8,6 @@ var gilbert = function() {
   this.$node = $('<div class = "gilcube"></div>');//element for faces to append to
   this.xpos = (Math.random() * 1000);
   this.ypos = (Math.random() * 1000);
-  this.zpos = (Math.random() * 800); //TODO implement random Z on instantiation 
 
   this.rotateMul = (Math.random()*10); //TODO implement variable rotation speed
 
@@ -41,30 +40,30 @@ var updateView = function() {
 
 $(document).ready(function() {
 
-var scene = document.getElementById( 'scene' ),
-viewport = document.getElementById( 'viewport' );
+  var scene = document.getElementById( 'scene' ),
+  viewport = document.getElementById( 'viewport' );
 
 
   window.addEventListener( 'mousemove', function( e ) {
     sceneYAngle = -( .5 - ( e.clientX / window.innerWidth ) ) * 180;
     sceneXAngle = ( .5 - ( e.clientY / window.innerHeight ) ) * 180;
     updateView();
-} );
+  });
 
   $('#rotate').on('click', function() {
 
     $('.gilcube').addClass('rotate');
-
     setTimeout( function(){ $('.gilcube').removeClass('rotate').addClass('return'); 
-      setTimeout( function(){ $('.gilcube').removeClass('return') } , 5000);
+    setTimeout( function(){ $('.gilcube').removeClass('return') } , 5000);
 
- }, 5000)})
+  }, 5000)})
+  
+  $(document).on('click', '.gilcube', function() { $(this).addClass('rotate');
+    setTimeout( function() { $(this).removeClass('rotate'); }, 5000);
+  });
   
   $('#addgilbert').on('click', function() {
     var gil = new gilbert();
-  });
-  $(document).on('click', '.gilcube', function() { $(this).addClass('rotate');
-    setTimeout( function() { $(this).removeClass('rotate'); }, 5000);
   });
 
 });
