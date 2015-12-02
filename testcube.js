@@ -1,7 +1,8 @@
 
 var sceneXAngle = 0,
 sceneYAngle = 0,
-d = -860; 
+d = -860,
+faceImage = 'box.png';
 
 var gilbert = function() {
   //
@@ -15,12 +16,12 @@ var gilbert = function() {
 
 //function creates an array of face divs to be appended to main gilcube element
   this.cubeFaces = function() {  
-    var faces = ['<img src="gilberthead.png" class="cube-face cube-face-front"></img>',
-      '<img src="gilberthead.png" class="cube-face  cube-face-back"></img>',
-      '<img src="gilberthead.png" class="cube-face  cube-face-left"></img>', 
-      '<img src="gilberthead.png" class="cube-face  cube-face-right"></img>',
-      '<img src="gilberthead.png" class="cube-face  cube-face-top"></img>',
-      '<img src="gilberthead.png" class="cube-face  cube-face-bottom"></img>'];
+    var faces = ['<img src=' + faceImage + ' class="cube-face cube-face-front"></img>',
+      '<img src=' + faceImage + ' class="cube-face  cube-face-back"></img>',
+      '<img src=' + faceImage + ' class="cube-face  cube-face-left"></img>', 
+      '<img src=' + faceImage + ' class="cube-face  cube-face-right"></img>',
+      '<img src=' + faceImage + ' class="cube-face  cube-face-top"></img>',
+      '<img src=' + faceImage + ' class="cube-face  cube-face-bottom"></img>'];
     var $face;
     for (var i = 0; i < faces.length; i++) {
       $face = faces[i];
